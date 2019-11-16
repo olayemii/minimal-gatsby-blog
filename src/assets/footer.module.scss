@@ -6,6 +6,7 @@
 	display: flex;
 	align-items: center;
 	box-sizing: border-box;
+	padding: 20px 0;
 	.footer-links {
 		display: flex;
 		justify-content: center;
@@ -22,6 +23,26 @@
 				border-radius: 50%;
 				background: $dark-color;
 			}
+		}
+	}
+	.heart-emoji {
+		font-size: 21px;
+		color: $cyan-color;
+	}
+
+	.social-icons {
+		display: flex;
+		justify-content: center;
+		li {
+			background: whitesmoke;
+			padding: 7px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;	
+		}
+		li:not(:last-child) {
+			margin-right: 15px;
 		}
 	}
 }

@@ -5,7 +5,7 @@ const Article = props => {
 	return (
 		<article className={articleStyles.articleCard}>
 			<h1 className={articleStyles.articleTitle}>Introduction to Gatsby</h1>
-			<div>
+			<div className={articleStyles.articleMeta}>
 				<span className={articleStyles.articleDate}>May 24, 2019</span>
 				<span className={articleStyles.articleRead}>2 min read</span>
 			</div>
