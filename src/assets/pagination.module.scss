@@ -1,0 +1,8 @@
+.pagination-wrapper {
+	display: flex;
+	padding-top: 30px;
+	.page-count {
+		flex-grow: 1;
+		text-align: center;
+	}
+}

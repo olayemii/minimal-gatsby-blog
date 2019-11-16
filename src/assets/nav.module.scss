@@ -1,0 +1,136 @@
+@import "_theme";
+.nav-bar {
+	height: 60px;
+	border-bottom: 3px solid $cyan-color;
+	display: flex;
+	align-items: center;
+
+	.brand {
+		font-size: 25px;
+		font-weight: bold;
+		color: $cyan-color;
+		margin-right: 20px;
+	}
+
+	.quick-links {
+		list-style: none;
+		display: flex;
+		flex-grow: 1;
+		li {
+			padding-right: 30px;
+			font-size: 15px;
+			cursor: pointer;
+		}
+	}
+	.right-nav {
+		display: flex;
+		align-items: center;
+		.hamburger-menu {
+			display: none;
+		}
+		.form-wrapper {
+			display: flex;
+			align-items: center;
+			background: whitesmoke;
+			height: 35px;
+			padding: 0 10px;
+			border-radius: 5px;
+			min-width: 280px;	
+			margin-right: 20px;	
+			input {
+				width: 100%;
+				border: none;
+				padding-left: 10px;
+				font-size: 14px;
+				background: transparent;
+				outline: none;
+			}
+		}
+		.social-links {
+			display: flex;
+			align-items: center;
+			list-style: none;
+			li {
+				display: flex;
+				padding-right: 20px;
+
+				.social-icon {
+					color: #999999;
+					transition: 0.3s ease all;
+					&:hover {
+						color: $cyan-color;;
+						cursor: pointer;
+					}
+				}
+			}
+		}		
+	}
+	@media screen and (max-width: 1440px) {
+		.brand {
+			flex-grow: 1;
+		}
+		.quick-links{
+			display: none;
+		}
+		.right-nav {
+			.form-wrapper {
+				margin-right: 100px;
+			}
+			.social-links {
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: 1440px) {
+		.right-nav {
+			.hamburger-menu {
+				display: block;
+			}
+			.form-wrapper {
+				display: none;
+			}
+		}
+	}
+}
+.overlay {
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(255,255,255,0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	.quick-links {
+		text-align: center;
+		li {
+			margin: 20px 0;
+			font-size: 18px;
+			position: relative;
+			&:not(:first-child){
+				display: none;
+			}
+	
+			&:first-child {
+				animation: animate 0.3s ease;
+			}
+		}
+	}
+
+	.social-links {
+		display: none !important;
+		li {
+			margin-right: 10px;
+		}
+	}
+
+
+}
+:global {
+@keyframes animate {
+	to: {bottom: 300px}
+}
+
+}

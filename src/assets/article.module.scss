@@ -1,0 +1,30 @@
+@import "_theme";
+
+.article-card {
+	border-bottom: 2px solid whitesmoke;
+	padding: 25px 0;
+	.article-date {
+		&::after {
+			content: "";
+			width: 5px;
+			height: 5px;
+			position: relative;
+			top: -3px;
+			margin: 0 7px;
+			border-radius: 50%;
+			background-color: $dark-color;
+			display: inline-block;
+		}
+	}
+	.article-title {
+		display: inline-block;
+		&:hover {
+			color: $cyan-color;
+			cursor: pointer;
+		}
+	}
+	.article-body {
+		font-size: 1.1em;
+		text-align: justify;
+	}
+}

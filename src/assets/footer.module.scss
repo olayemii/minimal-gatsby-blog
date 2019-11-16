@@ -1,0 +1,27 @@
+@import "_theme";
+
+.footer {
+	border-top: 3px solid $cyan-color;
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	.footer-links {
+		display: flex;
+		justify-content: center;
+		padding: 15px 0;
+		li:not(:last-child) {
+			&::after {
+				content: "";
+				display: inline-flex;
+				width: 5px;
+				margin: 0 15px;
+				position: relative;
+				top: -2px;
+				height: 5px;
+				border-radius: 50%;
+				background: $dark-color;
+			}
+		}
+	}
+}
