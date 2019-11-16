@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import navStyles from "../../../assets/nav.module.scss"
 import {
 	FaGithub,
@@ -7,9 +7,11 @@ import {
 	FaStackOverflow,
 	FaSearch,
 	FaBars,
+	FaTimes,
 } from "react-icons/fa"
 
 const Header = props => {
+	const [overlayState, setOverlayState] = useState(false)
 	return (
 		<>
 			<header className={navStyles.navBar}>
@@ -29,7 +31,7 @@ const Header = props => {
 						<FaBars
 							size={20}
 							className={navStyles.hamburgerMenu}
-							onClick={() => alert(1)}
+							onClick={() => setOverlayState(true)}
 						/>
 						<ul className={navStyles.socialLinks}>
 							<li>
@@ -48,28 +50,38 @@ const Header = props => {
 					</div>
 				</div>
 			</header>
-			<div className={navStyles.overlay} style={{ display: "none" }}>
-				<ul className={navStyles.quickLinks}>
-					<li>Home</li>
-					<li>About</li>
-					<li>Projects</li>
-					<li>Posts</li>
-				</ul>
-				<ul className={navStyles.socialLinks}>
-					<li>
-						<FaGithub size={18} className={navStyles.socialIcon} />
-					</li>
-					<li>
-						<FaTwitter size={18} className={navStyles.socialIcon} />
-					</li>
-					<li>
-						<FaLinkedin size={18} className={navStyles.socialIcon} />
-					</li>
-					<li>
-						<FaStackOverflow size={18} className={navStyles.socialIcon} />
-					</li>
-				</ul>
-			</div>
+			{overlayState ? (
+				<div className={navStyles.overlay}>
+					<div class={navStyles.cancelOverlay}>
+						<FaTimes
+							onClick={() => {
+								setOverlayState(false)
+								window.scrollTo(0, 0)
+							}}
+						/>
+					</div>
+					<ul className={navStyles.quickLinks}>
+						<li>Home</li>
+						<li>About</li>
+						<li>Posts</li>
+						<li>Projects</li>
+					</ul>
+					<ul className={navStyles.socialLinks}>
+						<li>
+							<FaGithub size={24} className={navStyles.socialIcon} />
+						</li>
+						<li>
+							<FaTwitter size={24} className={navStyles.socialIcon} />
+						</li>
+						<li>
+							<FaLinkedin size={24} className={navStyles.socialIcon} />
+						</li>
+						<li>
+							<FaStackOverflow size={24} className={navStyles.socialIcon} />
+						</li>
+					</ul>
+				</div>
+			) : null}
 		</>
 	)
 }
