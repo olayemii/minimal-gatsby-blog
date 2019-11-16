@@ -27,4 +27,11 @@
 		font-size: 1.1em;
 		text-align: justify;
 	}
+
+	@media screen and (max-width: 426px) {
+		.article-body {
+			font-size: 15px;
+			text-align: justify;
+		}
+	}
 }
