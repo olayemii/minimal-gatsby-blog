@@ -29,9 +29,13 @@
 	}
 
 	@media screen and (max-width: 426px) {
+		.article-date {
+			font-size: 15px;
+		}
 		.article-body {
 			font-size: 15px;
 			text-align: justify;
+			line-height: 1.5em;
 		}
 	}
 }

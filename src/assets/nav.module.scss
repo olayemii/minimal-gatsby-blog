@@ -65,6 +65,13 @@
 			}
 		}		
 	}
+	@media screen and (max-width: 601px) {
+		.right-nav {
+			.form-wrapper {
+				display: none;
+			}
+		}
+	}
 	@media screen and (max-width: 1440px) {
 		.brand {
 			flex-grow: 1;
@@ -73,6 +80,9 @@
 			display: none;
 		}
 		.right-nav {
+			.hamburger-menu {
+				display: block;
+			}
 			.form-wrapper {
 				margin-right: 100px;
 			}
@@ -83,12 +93,8 @@
 	}
 	@media screen and (max-width: 426px) {
 		.right-nav {
-			.hamburger-menu {
-				display: block;
-			}
-			.form-wrapper {
-				display: none;
-			}
+			background: none;
+			//Nothing really
 		}
 	}
 }
