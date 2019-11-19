@@ -16,5 +16,11 @@ module.exports = {
 				},
 			},
 		},
+		{
+			resolve: "gatsby-source-rest-api",
+			options: {
+				endpoints: ["http://www.mocky.io/v2/5dd18bf73200005d0006fad6"],
+			},
+		},
 	],
 }

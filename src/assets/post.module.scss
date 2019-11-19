@@ -1,0 +1,130 @@
+@import "_theme";
+.post-body {
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	grid-column-gap: 70px;
+	line-height: 1.7em;
+
+	.article-main {
+		text-align: justify;
+		img {
+			width: 100%;
+			margin: 10px 0;
+		}
+
+		h1 {
+			line-height: 1.5em;
+			font-size: 1.2em;
+			text-align: left;
+		}
+		.article-title {
+			font-size: 1.4em;
+			line-height: 2rem;
+			text-align: left;
+		}
+
+		.article-meta {
+			padding-bottom: 30px;
+			.meta-flex {
+				padding: 5px 0;
+				display: flex;
+				align-items: center;
+				.author-details {
+					display: flex;
+					margin-right: 10px;
+					align-items: center;
+					.author-photo {
+						width: 30px;
+						height: 30px;
+						border-radius: 50%;
+						overflow: hidden;
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+					.author-name {
+						margin-left: 5px;
+						font-weight: bold;
+						font-size: 15px;
+						display: flex;
+						align-items: center;
+						&::after {
+							content: "";
+							display: block;
+							margin-left: 10px;
+							width: 5px;
+							height: 5px;
+							background: $dark-color;
+							opacity: 0.2;
+							border-radius: 50%;
+						}
+					}
+				}
+				.date {
+					display: flex;
+					align-items: center;
+					&::after {
+						background: $dark-color;
+						opacity: 0.2;
+						width: 5px;
+						height: 5px;
+						border-radius: 50%;
+						margin: 0 10px;
+						content: "";
+						display: inline-block;
+					}
+				}
+			}
+			.tags {
+				display: flex;
+				margin: 10px 0;
+				li {
+					border: 1px solid $cyan-color;
+					color: $cyan-color;
+					font-size: 12px;
+					padding: 0px 15px;
+					height: 2em;
+					border-radius: 18px;
+				}
+				li:not(:last-child) {
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+	.disqus-wrapper {
+		margin-top: 50px;
+		border-top: 2px solid whitesmoke;		
+		padding-top: 25px;
+
+		iframe:first-child {
+			height: 350px !important;
+		}
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	.post-body {
+		grid-template-columns: 1fr;
+
+		aside {
+			margin-top: 25px;
+		}
+	}
+}
+
+@media screen and (max-width: 426px) {
+	.container {
+		max-width: 90%;
+	}
+
+	.main-layout-body {
+		max-width: 90%;
+		padding: 30px 0;
+	}
+
+	h1 {
+		font-size: 1.4em;
+	}
+}

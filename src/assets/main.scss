@@ -1,4 +1,5 @@
 @import "_reset.scss";
+@import "_theme.scss";
 body {
 	margin: 0;
 	color: #333333;	
@@ -25,7 +26,7 @@ body {
 .main-layout-body {
 	padding: 70px 0;
 	min-height: calc(82vh);
-	max-width: 800px;
+	max-width: 968px;
 }
 
 h1 { 
@@ -39,7 +40,10 @@ p {
 	margin: 20px 0;
 	line-height: 1.6em;
 }
-
+*::selection {
+	background-color: $cyan-color;
+	color: white;
+}
 @media screen and (max-width: 1441px) {
 	.container {
 		max-width: 80%;
