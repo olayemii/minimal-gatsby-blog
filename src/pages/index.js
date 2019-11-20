@@ -20,8 +20,8 @@ const Index = props => {
 					<Article />
 				</div>
 				<Pagination />
-			</div>
-		</MainLayout>
+			</MainLayout>
+		</div>
 	)
 }
 
