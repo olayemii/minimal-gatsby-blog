@@ -10,9 +10,7 @@ import Post from "./Post"
 const Index = props => {
 	return (
 		<div className={mainStyles.App}>
-			<MainLayout>
-				<Post />
-			</MainLayout>
+			<Post />
 		</div>
 	)
 }
