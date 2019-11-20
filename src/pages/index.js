@@ -12,8 +12,8 @@ const Index = props => {
 		<div className={mainStyles.App}>
 			<MainLayout>
 				<Post />
-			</div>
-		</MainLayout>
+			</MainLayout>
+		</div>
 	)
 }
 
