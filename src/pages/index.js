@@ -9,9 +9,17 @@ import Post from "./Post"
 
 const Index = props => {
 	return (
-		<div className={mainStyles.App}>
-			<Post />
-		</div>
+		<MainLayout>
+			<div className="articles">
+				<Article />
+				<Article />
+				<Article />
+				<Article />
+				<Article />
+				<Article />
+			</div>
+			<Pagination />
+		</MainLayout>
 	)
 }
 

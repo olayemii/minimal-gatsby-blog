@@ -1,8 +1,10 @@
 @import "_reset.scss";
 @import "_theme.scss";
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
 body {
 	margin: 0;
 	color: #333333;	
+	font-family: 'Nunito Sans', sans-serif !important;
 }
 
 .container {
