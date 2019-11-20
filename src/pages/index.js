@@ -11,7 +11,7 @@ const Index = props => {
 	return (
 		<div className={mainStyles.App}>
 			<MainLayout>
-				{* /* <div className="articles">
+				{/* <div className="articles">
 					<Article />
 					<Article />
 					<Article />
@@ -19,7 +19,7 @@ const Index = props => {
 					<Article />
 					<Article />
 				</div>
-				<Pagination /> */ *}
+				<Pagination /> */}
 				<Post />
 			</div>
 		</MainLayout>
