@@ -11,16 +11,15 @@ const Index = props => {
 	return (
 		<div className={mainStyles.App}>
 			<MainLayout>
-				<div className="articles">
-					// <Article />
-					// <Article />
-					// <Article />
-					// <Article />
-					// <Article />
-					// <Article />
-					//{" "}
+				{* /* <div className="articles">
+					<Article />
+					<Article />
+					<Article />
+					<Article />
+					<Article />
+					<Article />
 				</div>
-				// <Pagination />
+				<Pagination /> */ *}
 				<Post />
 			</div>
 		</MainLayout>
