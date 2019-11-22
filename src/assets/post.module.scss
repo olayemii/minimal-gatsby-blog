@@ -19,7 +19,7 @@
 		}
 		.article-title {
 			font-size: 1.4em;
-			line-height: 2rem;
+			line-height: 1.8rem;
 			text-align: left;
 		}
 
@@ -112,6 +112,9 @@
 			margin-top: 25px;
 		}
 	}
+}
+aside {
+	text-align: justify;
 }
 
 @media screen and (max-width: 426px) {
