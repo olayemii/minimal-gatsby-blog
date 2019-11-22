@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import navStyles from "../../../assets/nav.module.scss"
+import { Link } from "gatsby"
 import {
 	FaGithub,
 	FaTwitter,
@@ -16,7 +17,9 @@ const Header = props => {
 		<>
 			<header className={navStyles.navBar}>
 				<div className={"container dflex align-items-center"}>
-					<div className={navStyles.brand}>B</div>
+					<div className={navStyles.brand}>
+						<Link to="/">B</Link>
+					</div>
 					<ul className={navStyles.quickLinks}>
 						<li>Home</li>
 						<li>About</li>
