@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import articleStyles from "../../../assets/article.module.scss"
 let stripMd = function(md, options) {
   options = options || {}
@@ -78,7 +79,9 @@ const Article = props => {
   const { data } = props
   return (
     <article className={articleStyles.articleCard}>
-      <h1 className={articleStyles.articleTitle}>{data.title}</h1>
+      <h1 className={articleStyles.articleTitle}>
+        <Link to={`/${data.slug}`}>{data.title}</Link>
+      </h1>
       <div className={articleStyles.articleMeta}>
         <span className={articleStyles.articleDate}>May 24, 2019</span>
         <span className={articleStyles.articleRead}>2 min read</span>

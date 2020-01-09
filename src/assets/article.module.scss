@@ -32,7 +32,9 @@
     display: inline-block;
     font-size: 1.3rem;
     margin: 0;
-    color: #333;
+    a {
+      color: #333;
+    }
     &:hover {
       color: $cyan-color;
       cursor: pointer;
