@@ -1,0 +1,20 @@
+.pagination-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 30px;
+  font-size: 14px;
+}
+
+.pagination-wrapper .page-count {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+
+.pagination-wrapper .paginate::after {
+  content: "";
+  display: block;
+}
+/*# sourceMappingURL=pagination.module.css.map */

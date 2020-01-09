@@ -1,71 +1,76 @@
 @import "_reset.scss";
 @import "_theme.scss";
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
 body {
-	margin: 0;
-	color: #333333;	
-	font-family: 'Nunito Sans', sans-serif !important;
+  margin: 0;
+  color: #333333;
+  font-family: "Merriweather", serif;
+  line-height: 1.9em !important;
 }
-
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.dflex {
+  display: flex;
+}
 .container {
-	max-width: 1200px;
-	width: 100%;
-	margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .dflex {
-	display: flex;
+  display: flex;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .align-items-center {
-	align-items: center;
+  align-items: center;
 }
 
 .main-layout-body {
-	padding: 70px 0;
-	min-height: calc(82vh);
-	max-width: 968px;
+  padding: 70px 0;
+  min-height: calc(82vh);
+  max-width: 968px;
 }
 
-h1 { 
-    display: block;
-    font-size: 2em;
-    margin: 0.5em 0;
-    font-weight: bold;
+h1 {
+  display: block;
+  font-size: 2em;
+  margin: 0.5em 0;
+  font-weight: bold;
 }
 
 p {
-	margin: 20px 0;
-	line-height: 1.6em;
+  margin: 20px 0;
 }
 *::selection {
-	background-color: $cyan-color;
-	color: white;
+  background-color: $cyan-color;
+  color: white;
 }
 @media screen and (max-width: 1441px) {
-	.container {
-		max-width: 80%;
-	}
-	.main-layout-body {
-		max-width: 80%;
-	}
+  .container {
+    max-width: 80%;
+  }
+  .main-layout-body {
+    max-width: 80%;
+  }
 }
 
 @media screen and (max-width: 426px) {
-	.container {
-		max-width: 90%;
-	}
+  .container {
+    max-width: 90%;
+  }
 
-	.main-layout-body {
-		max-width: 90%;
-		padding: 30px 0;
-	}
+  .main-layout-body {
+    max-width: 90%;
+    padding: 30px 0;
+  }
 
-	h1 {
-		font-size: 1.4em;
-	}
+  h1 {
+    font-size: 1.4em;
+  }
 }

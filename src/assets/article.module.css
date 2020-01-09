@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+.article-card {
+  border-bottom: 2px solid whitesmoke;
+  padding: 25px 0;
+}
+
+.article-card a {
+  font-size: 15px;
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+.article-card .article-meta {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #8e99a1;
+  line-height: 1.2em;
+}
+
+.article-card .article-meta .article-date::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  position: relative;
+  top: -3px;
+  margin: 0 7px;
+  border-radius: 50%;
+  opacity: 0.2;
+  display: inline-block;
+}
+
+.article-card .article-title {
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0;
+  color: #333;
+}
+
+.article-card .article-title:hover {
+  color: #2ec4b6;
+  cursor: pointer;
+}
+
+.article-card .article-body {
+  text-align: justify;
+  font-weight: 300;
+  color: #5d686f;
+  word-break: break-word;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 426px) {
+  .article-card .article-title {
+    font-size: 1.1rem;
+  }
+  .article-card .article-body {
+    font-size: 15px;
+    text-align: justify;
+  }
+}
+/*# sourceMappingURL=article.module.css.map */

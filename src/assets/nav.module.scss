@@ -1,181 +1,178 @@
 @import "_theme";
 .nav-bar {
-	height: 60px;
-	border-bottom: 3px solid $cyan-color;
-	display: flex;
-	align-items: center;
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #e6e6e6;
+  .brand {
+    a {
+      font-size: 25px;
+      font-weight: bold;
+      color: $cyan-color;
+      margin-right: 20px;
+      text-decoration: none;
+    }
+  }
 
-	.brand {
-		a {
-			font-size: 25px;
-			font-weight: bold;
-			color: $cyan-color;
-			margin-right: 20px;
-			text-decoration: none;
+  .quick-links {
+    list-style: none;
+    display: flex;
+    flex-grow: 1;
+    li {
+      padding-right: 30px;
+      cursor: pointer;
+    }
+  }
+  .right-nav {
+    display: flex;
+    align-items: center;
+    .hamburger-menu {
+      display: none;
+    }
+    .form-wrapper {
+      display: flex;
+      align-items: center;
+      background: whitesmoke;
+      height: 35px;
+      padding: 0 10px;
+      border-radius: 5px;
+      min-width: 280px;
+      margin-right: 20px;
+      input {
+        width: 100%;
+        border: none;
+        padding-left: 10px;
+        font-size: 14px;
+        background: transparent;
+        outline: none;
+      }
+    }
+    .social-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      li {
+        display: flex;
+        padding-right: 20px;
 
-		}
-	}
+        .social-icon {
+          color: #999999;
+          transition: 0.3s ease all;
+          &:hover {
+            color: $cyan-color;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 601px) {
+    .right-nav {
+      .form-wrapper {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: 1440px) {
+    .brand {
+      flex-grow: 1;
+    }
+    .quick-links {
+      display: none;
+    }
+    .right-nav {
+      .hamburger-menu {
+        display: block;
 
-	.quick-links {
-		list-style: none;
-		display: flex;
-		flex-grow: 1;
-		li {
-			padding-right: 30px;
-			font-size: 15px;
-			cursor: pointer;
-		}
-	}
-	.right-nav {
-		display: flex;
-		align-items: center;
-		.hamburger-menu {
-			display: none;
-		}
-		.form-wrapper {
-			display: flex;
-			align-items: center;
-			background: whitesmoke;
-			height: 35px;
-			padding: 0 10px;
-			border-radius: 5px;
-			min-width: 280px;	
-			margin-right: 20px;	
-			input {
-				width: 100%;
-				border: none;
-				padding-left: 10px;
-				font-size: 14px;
-				background: transparent;
-				outline: none;
-			}
-		}
-		.social-links {
-			display: flex;
-			align-items: center;
-			list-style: none;
-			li {
-				display: flex;
-				padding-right: 20px;
-
-				.social-icon {
-					color: #999999;
-					transition: 0.3s ease all;
-					&:hover {
-						color: $cyan-color;;
-						cursor: pointer;
-					}
-				}
-			}
-		}		
-	}
-	@media screen and (max-width: 601px) {
-		.right-nav {
-			.form-wrapper {
-				display: none;
-			}
-		}
-	}
-	@media screen and (max-width: 1440px) {
-		.brand {
-			flex-grow: 1;
-		}
-		.quick-links{
-			display: none;
-		}
-		.right-nav {
-			.hamburger-menu {
-				display: block;
-
-				&:hover {
-					cursor: pointer;
-				}
-			}
-			.form-wrapper {
-				margin-right: 100px;
-			}
-			.social-links {
-				display: none;
-			}
-		}
-	}
-	@media screen and (max-width: 426px) {
-		.right-nav {
-			background: none;
-			//Nothing really
-		}
-	}
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .form-wrapper {
+        margin-right: 100px;
+      }
+      .social-links {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: 426px) {
+    .right-nav {
+      background: none;
+      //Nothing really
+    }
+  }
 }
 .overlay {
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background: rgba(255,255,255,0.9);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	.cancel-overlay {
-		&:hover {
-			cursor: pointer;
-		}
-	}
-	.quick-links {
-		text-align: center;
-		li {
-			& :global {
-				margin: 30px 0;
-				font-size: 24px;
-				animation-name: navFadeIn;
-				animation-duration: 0.5s;
-				animation-fill-mode: both;
-				animation-direction: normal;				
-			}
-			&:hover {
-				cursor: pointer;
-				color: $cyan-color;
-			}
-			&:nth-child(2) {
-				animation-delay: 0.2s;
-			}
-			&:nth-child(3) {
-				animation-delay: 0.4s;
-			}
-			&:nth-child(4) {
-				animation-delay: 0.6s;
-			}
-		}
-	}
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .cancel-overlay {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .quick-links {
+    text-align: center;
+    li {
+      & :global {
+        margin: 30px 0;
+        font-size: 24px;
+        animation-name: navFadeIn;
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+        animation-direction: normal;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $cyan-color;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+    }
+  }
 
-	.social-links {
-		display: flex;
-			& :global {
-				animation-name: navFadeIn;
-				animation-duration: 0.5s;
-				animation-fill-mode: both;
-				animation-direction: normal;
-				animation-delay: 0.8s;				
-			}
-		li {
-			margin-right: 15px;
-			&:hover {
-				cursor: pointer;
-				color: $cyan-color;
-			}
-		}
-	}
-
-
+  .social-links {
+    display: flex;
+    & :global {
+      animation-name: navFadeIn;
+      animation-duration: 0.5s;
+      animation-fill-mode: both;
+      animation-direction: normal;
+      animation-delay: 0.8s;
+    }
+    li {
+      margin-right: 15px;
+      &:hover {
+        cursor: pointer;
+        color: $cyan-color;
+      }
+    }
+  }
 }
 @keyframes :global(navFadeIn) {
-	from {
-		transform: translateY(0);
-	    opacity: 0;
-	}
-	to {
-		transform: translateY(-10px);
-	    opacity: 1;
-	}
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
 }

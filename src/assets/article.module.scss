@@ -1,44 +1,58 @@
 @import "_theme";
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 .article-card {
-	border-bottom: 2px solid whitesmoke;
-	padding: 25px 0;
-	.article-date {
-		&::after {
-			content: "";
-			width: 5px;
-			height: 5px;
-			position: relative;
-			top: -3px;
-			margin: 0 7px;
-			border-radius: 50%;
-			background-color: $dark-color;
-			opacity: 0.2;
-			display: inline-block;
-		}
-	}
-	.article-title {
-		display: inline-block;
-		font-size: 1.57rem;
-		line-height: 1.6rem;
-		&:hover {
-			color: $cyan-color;
-			cursor: pointer;
-		}
-	}
-	.article-body {
-		font-size: 1.1em;
-		text-align: justify;
-	}
+  border-bottom: 2px solid whitesmoke;
+  padding: 25px 0;
+  a {
+    font-size: 15px;
+    color: cornflowerblue;
+    text-decoration: none;
+  }
+  .article-meta {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #8e99a1;
+    line-height: 1.2em;
+    .article-date {
+      &::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        position: relative;
+        top: -3px;
+        margin: 0 7px;
+        border-radius: 50%;
+        opacity: 0.2;
+        display: inline-block;
+      }
+    }
+  }
+  .article-title {
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0;
+    color: #333;
+    &:hover {
+      color: $cyan-color;
+      cursor: pointer;
+    }
+  }
+  .article-body {
+    text-align: justify;
+    font-weight: 300;
+    color: #5d686f;
+    word-break: break-word;
+    font-size: 16px;
+  }
 
-	@media screen and (max-width: 426px) {
-		.article-meta {
-			font-size: 13px;
-		}
-		.article-body {
-			font-size: 15px;
-			text-align: justify;
-			line-height: 1.5em;
-		}
-	}
+  @media screen and (max-width: 426px) {
+    .article-title {
+      font-size: 1.1rem;
+    }
+    .article-body {
+      font-size: 15px;
+      text-align: justify;
+    }
+  }
 }

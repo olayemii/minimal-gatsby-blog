@@ -1,0 +1,203 @@
+.post-body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 300px;
+      grid-template-columns: 1fr 300px;
+  grid-column-gap: 70px;
+  line-height: 1.7em;
+}
+
+.post-body .article-main {
+  text-align: justify;
+}
+
+.post-body .article-main a {
+  color: red;
+  text-decoration: none;
+  color: #349ef3;
+  word-break: break-word;
+}
+
+.post-body .article-main img {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.post-body .article-main h1 {
+  line-height: 1.5em;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.post-body .article-main .article-title {
+  font-size: 1.4em;
+  line-height: 1.4em;
+  text-align: left;
+}
+
+.post-body .article-main .article-tags {
+  padding-top: 10px;
+}
+
+.post-body .article-main .article-tags .tag {
+  color: #8e99a1;
+}
+
+.post-body .article-main .article-tags ul {
+  padding-top: 5px;
+}
+
+.post-body .article-main .article-tags ul li {
+  margin-right: 10px;
+  padding: 5px 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: #2ec4b6;
+  font-size: 15px;
+  text-transform: lowercase;
+  border: 1px solid #2ec4b6;
+}
+
+.post-body .article-main .article-meta .post-date {
+  font-size: 15px;
+  color: #8e99a1;
+}
+
+.post-body .article-main .article-meta .meta-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post-body .article-main .article-meta .meta-flex .post-meta-extra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.post-body .article-main .article-meta .meta-flex .author-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post-body .article-main .article-meta .meta-flex .author-details .author-photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.post-body .article-main .article-meta .meta-flex .author-details .author-photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.post-body .article-main .article-meta .meta-flex .author-details .author-name {
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post-body .article-main .article-meta .meta-flex .author-details .author-name::after {
+  content: "";
+  display: block;
+  margin-left: 10px;
+  width: 5px;
+  height: 5px;
+  background: #011627;
+  opacity: 0.2;
+  border-radius: 50%;
+}
+
+.post-body .article-main .article-meta .meta-flex .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post-body .article-main .article-meta .meta-flex .date::after {
+  background: #011627;
+  opacity: 0.2;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin: 0 10px;
+  content: "";
+  display: inline-block;
+}
+
+.post-body .article-main .article-meta .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.post-body .article-main .article-meta .tags li {
+  border: 1px solid #2ec4b6;
+  color: #2ec4b6;
+  font-size: 12px;
+  padding: 0px 15px;
+  height: 2em;
+  border-radius: 18px;
+}
+
+.post-body .article-main .article-meta .tags li:not(:last-child) {
+  margin-right: 15px;
+}
+
+.post-body .disqus-wrapper {
+  margin-top: 50px;
+  border-top: 2px solid whitesmoke;
+  padding-top: 25px;
+}
+
+.post-body .disqus-wrapper iframe:first-child {
+  height: 350px !important;
+}
+
+@media screen and (max-width: 1025px) {
+  .post-body {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .post-body aside {
+    margin-top: 25px;
+  }
+}
+
+aside {
+  text-align: justify;
+}
+
+@media screen and (max-width: 426px) {
+  .container {
+    max-width: 90%;
+  }
+  .main-layout-body {
+    max-width: 90%;
+    padding: 30px 0;
+  }
+  h1 {
+    font-size: 1.4em;
+  }
+}
+/*# sourceMappingURL=post.module.css.map */

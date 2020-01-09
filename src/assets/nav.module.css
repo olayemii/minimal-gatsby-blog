@@ -1,0 +1,253 @@
+.nav-bar {
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.nav-bar .brand a {
+  font-size: 25px;
+  font-weight: bold;
+  color: #2ec4b6;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.nav-bar .quick-links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.nav-bar .quick-links li {
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.nav-bar .right-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-bar .right-nav .hamburger-menu {
+  display: none;
+}
+
+.nav-bar .right-nav .form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: whitesmoke;
+  height: 35px;
+  padding: 0 10px;
+  border-radius: 5px;
+  min-width: 280px;
+  margin-right: 20px;
+}
+
+.nav-bar .right-nav .form-wrapper input {
+  width: 100%;
+  border: none;
+  padding-left: 10px;
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+}
+
+.nav-bar .right-nav .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.nav-bar .right-nav .social-links li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 20px;
+}
+
+.nav-bar .right-nav .social-links li .social-icon {
+  color: #999999;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.nav-bar .right-nav .social-links li .social-icon:hover {
+  color: #2ec4b6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 601px) {
+  .nav-bar .right-nav .form-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .nav-bar .brand {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .nav-bar .quick-links {
+    display: none;
+  }
+  .nav-bar .right-nav .hamburger-menu {
+    display: block;
+  }
+  .nav-bar .right-nav .hamburger-menu:hover {
+    cursor: pointer;
+  }
+  .nav-bar .right-nav .form-wrapper {
+    margin-right: 100px;
+  }
+  .nav-bar .right-nav .social-links {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .nav-bar .right-nav {
+    background: none;
+  }
+}
+
+.overlay {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.overlay .cancel-overlay:hover {
+  cursor: pointer;
+}
+
+.overlay .quick-links {
+  text-align: center;
+}
+
+.overlay .quick-links li :global {
+  margin: 30px 0;
+  font-size: 24px;
+  -webkit-animation-name: navFadeIn;
+          animation-name: navFadeIn;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+.overlay .quick-links li:hover {
+  cursor: pointer;
+  color: #2ec4b6;
+}
+
+.overlay .quick-links li:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.overlay .quick-links li:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.overlay .quick-links li:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.overlay .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overlay .social-links :global {
+  -webkit-animation-name: navFadeIn;
+          animation-name: navFadeIn;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.overlay .social-links li {
+  margin-right: 15px;
+}
+
+.overlay .social-links li:hover {
+  cursor: pointer;
+  color: #2ec4b6;
+}
+
+@-webkit-keyframes :global(navFadeIn) {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+@keyframes :global(navFadeIn) {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=nav.module.css.map */
