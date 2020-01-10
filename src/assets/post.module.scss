@@ -1,6 +1,5 @@
 @import "_theme";
 .article-main-body {
-  text-align: justify;
   font-weight: 300;
   color: #5d686f;
   word-break: break-word;
@@ -17,7 +16,6 @@
       color: #349ef3;
       word-break: break-word;
     }
-    text-align: justify;
     img {
       width: 100%;
       margin: 10px 0;
@@ -28,7 +26,7 @@
       text-align: left;
     }
     .article-title {
-      font-size: 1.1em;
+      font-size: 1.2em;
       line-height: 1.4em;
       text-align: left;
     }
@@ -36,15 +34,16 @@
       padding-top: 10px;
       .tag {
         color: #8e99a1;
+        font-size: 14px;
       }
       ul {
         padding-top: 5px;
         li {
-          margin-right: 10px;
-          padding: 5px 15px;
+          margin-right: 8px;
+          padding: 1px 21px;
           display: inline-flex;
           color: $cyan-color;
-          font-size: 15px;
+          font-size: 14px;
           text-transform: lowercase;
           border: 1px solid $cyan-color;
         }
