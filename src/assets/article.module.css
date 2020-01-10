@@ -12,7 +12,6 @@
 
 .article-card .article-meta {
   font-family: "Open Sans", sans-serif;
-  font-weight: 600;
   font-size: 14px;
   color: #8e99a1;
   line-height: 1.2em;
@@ -33,7 +32,7 @@
 .article-card .article-title {
   display: inline-block;
   font-size: 1.3rem;
-  margin: 0;
+  margin: 3px 0;
 }
 
 .article-card .article-title a {
@@ -54,8 +53,10 @@
 }
 
 @media screen and (max-width: 426px) {
-  .article-card .article-title {
-    font-size: 1.1rem;
+  .article-card .article-title a {
+    font-size: 1.2rem;
+    padding: 5px 0;
+    display: inline-block;
   }
   .article-card .article-body {
     font-size: 15px;
