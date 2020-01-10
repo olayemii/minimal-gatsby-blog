@@ -107,12 +107,12 @@ p {
 }
 
 *::-moz-selection {
-  background-color: #2ec4b6;
+  background-color: #381c35;
   color: white;
 }
 
 *::selection {
-  background-color: #2ec4b6;
+  background-color: #381c35;
   color: white;
 }
 

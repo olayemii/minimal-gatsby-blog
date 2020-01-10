@@ -12,9 +12,9 @@
 }
 
 .nav-bar .brand a {
-  font-size: 25px;
+  font-size: 15px;
   font-weight: bold;
-  color: #2ec4b6;
+  color: #381c35;
   margin-right: 20px;
   text-decoration: none;
 }
@@ -95,7 +95,7 @@
 }
 
 .nav-bar .right-nav .social-links li .social-icon:hover {
-  color: #2ec4b6;
+  color: #381c35;
   cursor: pointer;
 }
 
@@ -115,6 +115,7 @@
     display: none;
   }
   .nav-bar .right-nav .hamburger-menu {
+    color: #8e99a1;
     display: block;
   }
   .nav-bar .right-nav .hamburger-menu:hover {
@@ -179,7 +180,7 @@
 
 .overlay .quick-links li:hover {
   cursor: pointer;
-  color: #2ec4b6;
+  color: #381c35;
 }
 
 .overlay .quick-links li:nth-child(2) {
@@ -222,7 +223,7 @@
 
 .overlay .social-links li:hover {
   cursor: pointer;
-  color: #2ec4b6;
+  color: #381c35;
 }
 
 @-webkit-keyframes :global(navFadeIn) {

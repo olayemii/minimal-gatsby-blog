@@ -42,10 +42,10 @@
           margin-right: 8px;
           padding: 1px 21px;
           display: inline-flex;
-          color: $cyan-color;
+          color: $primary-color;
           font-size: 14px;
           text-transform: lowercase;
-          border: 1px solid $cyan-color;
+          border: 1px solid $primary-color;
         }
       }
     }
@@ -111,8 +111,8 @@
         display: flex;
         margin: 10px 0;
         li {
-          border: 1px solid $cyan-color;
-          color: $cyan-color;
+          border: 1px solid $primary-color;
+          color: $primary-color;
           font-size: 12px;
           padding: 0px 15px;
           height: 2em;

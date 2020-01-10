@@ -8,9 +8,9 @@
   border-bottom: 2px solid #e6e6e6;
   .brand {
     a {
-      font-size: 25px;
+      font-size: 15px;
       font-weight: bold;
-      color: $cyan-color;
+      color: $primary-color;
       margin-right: 20px;
       text-decoration: none;
     }
@@ -61,7 +61,7 @@
           color: #999999;
           transition: 0.3s ease all;
           &:hover {
-            color: $cyan-color;
+            color: $primary-color;
             cursor: pointer;
           }
         }
@@ -84,6 +84,7 @@
     }
     .right-nav {
       .hamburger-menu {
+        color: #8e99a1;
         display: block;
 
         &:hover {
@@ -134,7 +135,7 @@
       }
       &:hover {
         cursor: pointer;
-        color: $cyan-color;
+        color: $primary-color;
       }
       &:nth-child(2) {
         animation-delay: 0.2s;
@@ -161,7 +162,7 @@
       margin-right: 15px;
       &:hover {
         cursor: pointer;
-        color: $cyan-color;
+        color: $primary-color;
       }
     }
   }
