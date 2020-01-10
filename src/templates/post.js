@@ -52,7 +52,9 @@ const Post = props => {
               </span>
             </div>
           </div>
-          <ReactMarkdown source={data.restApiPosts.content} />
+          <div className={postStyles.articleMainBody}>
+            <ReactMarkdown source={data.restApiPosts.content} />
+          </div>
           <div className={postStyles.articleTags}>
             <div className={postStyles.tag}>TAGGED IN</div>
             <ul>
