@@ -83,8 +83,7 @@ const Article = props => {
         <Link to={`/${data.slug}`}>{data.title}</Link>
       </h1>
       <div className={articleStyles.articleMeta}>
-        <span className={articleStyles.articleDate}>May 24, 2019</span>
-        <span className={articleStyles.articleRead}>2 min read</span>
+        <span className={articleStyles.articleDate}>August 24, 2019</span>
       </div>
       <p className={articleStyles.articleBody}>
         {stripMd(data.content).slice(0, 193)}...

@@ -10,7 +10,6 @@
   }
   .article-meta {
     font-family: "Open Sans", sans-serif;
-    font-weight: 600;
     font-size: 14px;
     color: #8e99a1;
     line-height: 1.2em;
@@ -31,7 +30,7 @@
   .article-title {
     display: inline-block;
     font-size: 1.3rem;
-    margin: 0;
+    margin: 3px 0;
     a {
       color: #333;
     }
@@ -50,7 +49,11 @@
 
   @media screen and (max-width: 426px) {
     .article-title {
-      font-size: 1.1rem;
+      a {
+        font-size: 1.2rem;
+        padding: 5px 0;
+        display: inline-block;
+      }
     }
     .article-body {
       font-size: 15px;
