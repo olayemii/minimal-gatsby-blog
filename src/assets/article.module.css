@@ -60,7 +60,7 @@
   }
   .article-card .article-body {
     font-size: 15px;
-    text-align: justify;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=article.module.css.map */

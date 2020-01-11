@@ -24,7 +24,7 @@ module.exports = {
           // "http://localhost:8080/posts/list",
           // "http://localhost:8080/posts/tags",
           "https://gatsby-minimal-blog.herokuapp.com/posts/list",
-          "https://gatsby-minimal-blog.herokuapp.com/posts/tags/",
+          "https://gatsby-minimal-blog.herokuapp.com/posts/tags",
         ],
       },
     },
