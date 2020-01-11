@@ -21,8 +21,8 @@ module.exports = {
       options: {
         endpoints: [
           // "http://www.mocky.io/v2/5dd18bf73200005d0006fad6",
-          "http://localhost:8080/posts",
-          // "https://gatsby-minimal-blog.herokuapp.com/posts/",
+          // "http://localhost:8080/posts",
+          "https://gatsby-minimal-blog.herokuapp.com/posts/",
         ],
       },
     },
