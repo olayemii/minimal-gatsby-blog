@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
-import { navigate } from "gatsby"
-
+import { Redirect } from "gatsby"
 function NotFound() {
   const redirectHome = () => {
     if (window.location.pathname.match(/^\/page\/1\/?$/)) {
@@ -9,7 +8,7 @@ function NotFound() {
 
     return false
   }
-  return redirectHome() ? <Redirect to={"/"} /> :<div>Page Not Found</div>
+  return redirectHome() ? <Redirect to={"/"} /> : <div>Page Not Found</div>
 }
 
 export default NotFound
