@@ -47,7 +47,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const posts = result.data.allRestApiPostsList.edges
   const tags = tagsPage.data.allRestApiPostsTags.edges
-  const postsPerPage = 1
+  const postsPerPage = 5
   const numberOfPages = Math.ceil(posts.length / postsPerPage)
 
   Array.from({ length: numberOfPages }).forEach((_, i) => {
