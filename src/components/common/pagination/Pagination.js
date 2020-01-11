@@ -3,7 +3,7 @@ import paginationStyles from "../../../assets/pagination.module.scss"
 import { Link } from "gatsby"
 
 const Pagination = props => {
-  let { currentPage, numberOfPages } = props
+  let { currentPage, numberOfPages, path, defaultPath } = props
   const getClassName = (currentPage, numberOfPages) => {
     let _className = ""
     if (currentPage === numberOfPages) {
@@ -20,7 +20,9 @@ const Pagination = props => {
     <div className={paginationStyles.paginationWrapper}>
       {props.currentPage > 1 && (
         <div className={paginationStyles.paginate}>
-          <Link to={currentPage > 2 ? `/page/${currentPage - 1}` : "/"}>
+          <Link
+            to={currentPage > 2 ? `${path}/${currentPage - 1}` : defaultPath}
+          >
             ← Newer
           </Link>
         </div>
@@ -30,7 +32,7 @@ const Pagination = props => {
       </div>
       {currentPage !== numberOfPages && (
         <div className={paginationStyles.paginate}>
-          <Link to={`/page/${currentPage + 1}`}>Older →</Link>
+          <Link to={`${path}/${currentPage + 1}`}>Older →</Link>
         </div>
       )}
     </div>

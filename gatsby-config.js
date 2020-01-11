@@ -21,11 +21,14 @@ module.exports = {
       options: {
         endpoints: [
           // "http://www.mocky.io/v2/5dd18bf73200005d0006fad6",
-          // "http://localhost:8080/posts",
+          // "http://localhost:8080/posts/list",
+          // "http://localhost:8080/posts/tags",
           "https://gatsby-minimal-blog.herokuapp.com/posts/",
+          "https://gatsby-minimal-blog.herokuapp.com/tags/",
         ],
       },
     },
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-react-helmet`,
   ],
 }

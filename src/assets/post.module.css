@@ -49,16 +49,20 @@
   padding-top: 5px;
 }
 
-.post-body .article-main .article-tags ul li {
+.post-body .article-main .article-tags ul a {
   margin-right: 8px;
-  padding: 1px 21px;
+}
+
+.post-body .article-main .article-tags ul li {
+  padding: 1px 15px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  color: #381c35;
+  color: cornflowerblue;
   font-size: 14px;
+  border-radius: 3px;
   text-transform: lowercase;
-  border: 1px solid #381c35;
+  border: 1px solid cornflowerblue;
 }
 
 .post-body .article-main .article-meta .post-date {

@@ -2,10 +2,22 @@ const path = require(`path`)
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
-
+  const tagsPage = await graphql(`
+    query GetTags {
+      allRestApiPostsTags {
+        edges {
+          node {
+            count
+            color
+            name
+          }
+        }
+      }
+    }
+  `)
   const result = await graphql(`
     query GetPost {
-      allRestApiPosts {
+      allRestApiPostsList {
         edges {
           node {
             slug
@@ -17,6 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
               }
             }
             id
+            created_at
             content
             title
             author {
@@ -32,7 +45,8 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  const posts = result.data.allRestApiPosts.edges
+  const posts = result.data.allRestApiPostsList.edges
+  const tags = tagsPage.data.allRestApiPostsTags.edges
   const postsPerPage = 1
   const numberOfPages = Math.ceil(posts.length / postsPerPage)
 
@@ -48,13 +62,36 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-  posts.forEach(({ node }) => {
+  posts.forEach(({ node }, index) => {
     createPage({
       path: node.slug,
       component: path.resolve(`./src/templates/post.js`),
       context: {
         slug: node.slug,
+        nextPost: posts[index - 1],
+        previousPost: posts[index + 1],
       },
+    })
+  })
+  console.log(tags)
+  tags.forEach(({ node }) => {
+    const tagPageCount = Math.ceil(node.count / postsPerPage)
+    Array.from({ length: tagPageCount }).forEach((_, i) => {
+      createPage({
+        path:
+          i === 0
+            ? `/tag/${node.name.toLowerCase()}`
+            : `/tag/${node.name.toLowerCase()}/page/${i + 1}`,
+        component: path.resolve(`./src/templates/tagsindex.js`),
+        context: {
+          tag: `/${node.name}/i`,
+          pagePath: `/tag/${node.name.toLowerCase()}`,
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numberOfPages: tagPageCount,
+          currentPage: i + 1,
+        },
+      })
     })
   })
 }
@@ -63,7 +100,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     type RestApiPosts implements Node {
-    tags: Tags
+    tags: [Tags]
     }
     type Tags {
     id: Int,

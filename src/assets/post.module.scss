@@ -38,14 +38,17 @@
       }
       ul {
         padding-top: 5px;
-        li {
+        a {
           margin-right: 8px;
-          padding: 1px 21px;
+        }
+        li {
+          padding: 1px 15px;
           display: inline-flex;
-          color: $primary-color;
+          color: cornflowerblue;
           font-size: 14px;
+          border-radius: 3px;
           text-transform: lowercase;
-          border: 1px solid $primary-color;
+          border: 1px solid cornflowerblue;
         }
       }
     }

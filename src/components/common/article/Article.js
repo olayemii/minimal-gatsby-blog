@@ -89,9 +89,9 @@ const Article = props => {
         {stripMd(data.content).slice(0, 193)}...
       </p>
       <p>
-        <a href="#" className={"link"}>
+        <Link to={`/${data.slug}`} className={"link"}>
           Continue reading
-        </a>
+        </Link>
       </p>
     </article>
   )

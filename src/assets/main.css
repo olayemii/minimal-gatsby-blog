@@ -57,6 +57,10 @@ body {
           flex-grow: 1;
 }
 
+.black-link {
+  color: #333333 !important;
+}
+
 .dflex {
   display: -webkit-box;
   display: -ms-flexbox;

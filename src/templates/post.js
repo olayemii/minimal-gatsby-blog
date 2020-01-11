@@ -5,9 +5,12 @@ import postStyles from "../assets/post.module.scss"
 import ReactMarkdown from "react-markdown"
 import Prism from "prismjs"
 import Disqus from "disqus-react"
+import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
+
 export const query = gql`
   query GetPost($slug: String!) {
-    restApiPosts(slug: { eq: $slug }) {
+    restApiPostsList(slug: { eq: $slug }) {
       slug
       tags {
         id
@@ -30,21 +33,57 @@ export const query = gql`
   }
 `
 
+const getClosePost = props => {
+  let {
+    pageContext: { previousPost, nextPost },
+  } = props
+
+  console.log(previousPost)
+  let previousPostMarkup = "",
+    nextPostMarkup = ""
+  if (previousPost) {
+    previousPostMarkup = `
+    <div class="flex-grow-1 text-left">←<br/>
+    <a href='/${previousPost.node.slug}' class="black-link">${previousPost.node.title}</a>
+    </div>
+    `
+  }
+
+  if (nextPost) {
+    nextPostMarkup = `
+    <div class="flex-grow-1 text-right">→<br/>
+    <a href=
+      '/${nextPost.node.slug}' class="black-link">${nextPost.node.title}</a>
+    </div>
+    `
+  }
+
+  return previousPostMarkup + nextPostMarkup
+}
 const Post = props => {
   const { data } = props
+
+  console.log(props)
   useEffect(() => {
     Prism.highlightAll()
   })
   const disqusShortname = "olayemiiblog" //found in your Disqus.com dashboard
   const disqusConfig = {
-    identifier: data.restApiPosts.id, //this.props.uniqueId
-    title: data.restApiPosts.title, //this.props.title
+    identifier: data.restApiPostsList.id, //this.props.uniqueId
+    title: data.restApiPostsList.title, //this.props.title
   }
   return (
     <MainLayout>
+      <Helmet
+        title={`TheNoobCoder | ${data.restApiPostsList.title}`}
+        defer={false}
+      />
+
       <div className={postStyles.postBody}>
         <article className={postStyles.articleMain}>
-          <h1 className={postStyles.articleTitle}>{data.restApiPosts.title}</h1>
+          <h1 className={postStyles.articleTitle}>
+            {data.restApiPostsList.title}
+          </h1>
           <div className={postStyles.articleMeta}>
             <div className={postStyles.metaFlex}>
               <span className={postStyles.postDate}>
@@ -53,16 +92,27 @@ const Post = props => {
             </div>
           </div>
           <div className={postStyles.articleMainBody}>
-            <ReactMarkdown source={data.restApiPosts.content} />
+            <ReactMarkdown source={data.restApiPostsList.content} />
           </div>
-          <div className={postStyles.articleTags}>
-            <div className={postStyles.tag}>TAGGED IN</div>
-            <ul>
-              <li>PHP</li>
-              <li>Javascript</li>
-              <li>Python</li>
-            </ul>
-          </div>
+          {data.restApiPostsList.tags.length ? (
+            <div className={postStyles.articleTags}>
+              <div className={postStyles.tag}>TAGGED IN</div>
+              <ul>
+                {data.restApiPostsList.tags.map(tag => (
+                  <Link
+                    key={tag.tag.name}
+                    to={`/tag/${tag.tag.name.toLowerCase()}`}
+                  >
+                    <li>{tag.tag.name}</li>
+                  </Link>
+                ))}{" "}
+              </ul>
+            </div>
+          ) : null}
+          <div
+            className="dflex"
+            dangerouslySetInnerHTML={{ __html: getClosePost(props) }}
+          ></div>
           <div className={postStyles.disqusWrapper}>
             <Disqus.DiscussionEmbed
               shortname={disqusShortname}
