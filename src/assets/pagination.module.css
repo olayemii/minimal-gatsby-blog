@@ -13,6 +13,11 @@
   text-align: center;
 }
 
+.pagination-wrapper a {
+  text-decoration: none;
+  color: #333333;
+}
+
 .pagination-wrapper .paginate::after {
   content: "";
   display: block;

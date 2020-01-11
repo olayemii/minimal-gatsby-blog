@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql as gql } from "gatsby"
 import "../assets/main.css"
 import MainLayout from "../components/layouts/main/MainLayout"
@@ -6,8 +6,8 @@ import Article from "../components/common/article/Article"
 import Pagination from "../components/common/pagination/Pagination"
 
 export const query = gql`
-  query GetPosts {
-    allRestApiPosts {
+  query GetPosts($limit: Int, $skip: Int) {
+    allRestApiPosts(limit: $limit, skip: $skip) {
       edges {
         node {
           slug
@@ -35,7 +35,9 @@ export const query = gql`
 `
 const Index = props => {
   const { data } = props
-  console.log(data)
+  const { currentPage, numberOfPages } = props.pageContext
+
+  console.log(props)
   return (
     <div className={"App"}>
       <MainLayout>
@@ -44,7 +46,7 @@ const Index = props => {
             <Article data={node.node} key={node.node.id} />
           ))}
         </div>
-        <Pagination />
+        <Pagination currentPage={currentPage} numberOfPages={numberOfPages} />
       </MainLayout>
     </div>
   )

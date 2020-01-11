@@ -1,7 +1,7 @@
 const path = require(`path`)
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   const result = await graphql(`
     query GetPost {
@@ -32,7 +32,23 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  result.data.allRestApiPosts.edges.forEach(({ node }) => {
+  const posts = result.data.allRestApiPosts.edges
+  const postsPerPage = 1
+  const numberOfPages = Math.ceil(posts.length / postsPerPage)
+
+  Array.from({ length: numberOfPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? "/" : `/page/${i + 1}`,
+      component: path.resolve(`./src/pages/blogindex.js`),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numberOfPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+  posts.forEach(({ node }) => {
     createPage({
       path: node.slug,
       component: path.resolve(`./src/templates/post.js`),
@@ -49,12 +65,10 @@ exports.createSchemaCustomization = ({ actions }) => {
     type RestApiPosts implements Node {
     tags: Tags
     }
-
     type Tags {
     id: Int,
     tag: Tag
     }
-
     type Tag {
     name: String,
     color: String
