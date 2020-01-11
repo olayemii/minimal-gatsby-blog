@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { Redirect } from "@reach/router"
 function NotFound() {
   const redirectHome = () => {
-    if (window.location.pathname.match(/^\/page\/1\/?$/)) {
+    if (window && window.location.pathname.match(/^\/page\/1\/?$/)) {
       return true
     }
 
