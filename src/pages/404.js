@@ -3,7 +3,7 @@ import { Redirect } from "@reach/router"
 function NotFound() {
   const redirectHome = () => {
     // work
-    if (window) {
+    if (typeof window !== undefined) {
       if (window.location.pathname.match(/^\/page\/1\/?$/)) {
         return true
       }
