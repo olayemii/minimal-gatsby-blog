@@ -10,10 +10,13 @@ import { Helmet } from "react-helmet"
 import { AiOutlineTwitter } from "react-icons/ai"
 import { TiSocialFacebook } from "react-icons/ti"
 import SEO from "../components/SEO"
+import moment from "moment"
+
 export const query = gql`
   query GetPost($slug: String!) {
     restApiPostsList(slug: { eq: $slug }) {
       slug
+      created_at
       tags {
         id
         tag {
@@ -88,7 +91,7 @@ const Post = props => {
           <div className={postStyles.articleMeta}>
             <div className={postStyles.metaFlex}>
               <span className={postStyles.postDate}>
-                August 20, 2019 by OLayemii
+                {moment(data.created_at).format("MMMM DD, YYYY")} by OLayemii
               </span>
             </div>
           </div>

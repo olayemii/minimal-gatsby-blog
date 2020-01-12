@@ -13,6 +13,7 @@ export const query = gql`
       edges {
         node {
           slug
+          created_at
           tags {
             id
             tag {

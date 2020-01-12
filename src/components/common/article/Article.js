@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import articleStyles from "../../../assets/article.module.scss"
+import moment from "moment"
 let stripMd = function(md, options) {
   options = options || {}
   options.listUnicodeChar = options.hasOwnProperty("listUnicodeChar")
@@ -77,13 +78,16 @@ let stripMd = function(md, options) {
 }
 const Article = props => {
   const { data } = props
+  console.log(data)
   return (
     <article className={articleStyles.articleCard}>
       <h1 className={articleStyles.articleTitle}>
         <Link to={`/${data.slug}`}>{data.title}</Link>
       </h1>
       <div className={articleStyles.articleMeta}>
-        <span className={articleStyles.articleDate}>August 24, 2019</span>
+        <span className={articleStyles.articleDate}>
+          {moment(data.created_at).format("MMMM DD, YYYY")}
+        </span>
       </div>
       <p className={articleStyles.articleBody}>
         {stripMd(data.content).slice(0, 193)}...
