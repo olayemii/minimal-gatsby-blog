@@ -54,7 +54,7 @@
 
 @media screen and (max-width: 426px) {
   .article-card .article-title a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 5px 0;
     display: inline-block;
   }
