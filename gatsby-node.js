@@ -4,7 +4,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
   const tagsPage = await graphql(`
     query GetTags {
-      allRestApiPostsTags {
+      allRestApiPostTags {
         edges {
           node {
             count
@@ -46,7 +46,9 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   const posts = result.data.allRestApiPostsList.edges
-  const tags = tagsPage.data.allRestApiPostsTags.edges
+  const tags = tagsPage.data.allRestApiPostsTags
+    ? tagsPage.data.allRestApiPostsTags.edges
+    : []
   const postsPerPage = 5
   const numberOfPages = Math.ceil(posts.length / postsPerPage)
 
@@ -99,19 +101,24 @@ exports.createPages = async ({ graphql, actions }) => {
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
-    type RestApiPosts implements Node {
-    tags: [Tags]
+    type RestApiPostsList implements Node {
+      tags: [Tags]
+    }
+    type RestApiPostTags implements Node {
+      id: Int,
+      count: Int,
+      name: String,
+      color: String    
     }
     type Tags {
     id: Int,
     tag: Tag
     }
     type Tag {
-    name: String,
-    color: String
-    }
-    type allRestApiPostsTags implements Node {
-      name: String
+      id: Int,
+      count: Int,
+      name: String,
+      color: String   
     }
     `
   createTypes(typeDefs)
