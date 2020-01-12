@@ -164,6 +164,10 @@ p {
   font-size: 1.1em;
 }
 
+.related-posts div {
+  padding: 0 10px;
+}
+
 @media screen and (max-width: 1441px) {
   .container {
     max-width: 85%;
