@@ -42,8 +42,6 @@ const Index = props => {
   return (
     <div className={"App"}>
       <Helmet title="TheNoobCoder | Home" defer={false} />
-      <Helmet meta={[{ name: "theme-color", content: "#00FF00" }]} />
-
       <MainLayout>
         <div className="articles">
           {data.allRestApiPostsList.edges.map(node => (
