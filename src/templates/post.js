@@ -126,14 +126,14 @@ const Post = props => {
           <div className="social-share">
             <h3>Share this article</h3>
             <a
-              href={`https://twitter.com/share?url=${props.uri}`}
+              href={`https://twitter.com/share?url=${props.location.href}`}
               className="twitter-share social-button"
             >
               <AiOutlineTwitter />
               Tweet
             </a>
             <a
-              href={`https://facebook.com/sharer.php?u=https:/${props.uri}`}
+              href={`https://facebook.com/sharer.php?u=https:/${props.location.href}`}
               className="facebook-share social-button"
             >
               <TiSocialFacebook />
