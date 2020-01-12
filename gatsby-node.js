@@ -110,6 +110,9 @@ exports.createSchemaCustomization = ({ actions }) => {
     name: String,
     color: String
     }
+    type allRestApiPostsTags implements Node {
+      name: String
+    }
     `
   createTypes(typeDefs)
 }
