@@ -7,49 +7,28 @@ import {
   FaLinkedin,
   FaStackOverflow,
   FaSearch,
-  FaBars,
   FaTimes,
 } from "react-icons/fa"
 
+import { FiMenu } from "react-icons/fi"
 const Header = props => {
   const [overlayState, setOverlayState] = useState(false)
   return (
     <>
       <header className={navStyles.navBar}>
-        <div className={"container dflex align-items-center"}>
+        <div className={"container fit-main-layout dflex align-items-center"}>
           <div className={navStyles.brand}>
             <Link to="/">NOOBCODER</Link>
           </div>
-          <ul className={navStyles.quickLinks}>
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Posts</li>
-          </ul>
           <div className={navStyles.rightNav}>
-            <div className={navStyles.formWrapper}>
-              <FaSearch color={"#999999"} size={18} />
-              <input placeholder={"Search posts"} />
-            </div>
-            <FaBars
+            {/* <div className={navStyles.formWrapper}>
+              <FiSearch color={"#333333"} size={16} />
+            </div> */}
+            <FiMenu
               size={20}
               className={navStyles.hamburgerMenu}
               onClick={() => setOverlayState(true)}
             />
-            <ul className={navStyles.socialLinks}>
-              <li>
-                <FaGithub size={18} className={navStyles.socialIcon} />
-              </li>
-              <li>
-                <FaTwitter size={18} className={navStyles.socialIcon} />
-              </li>
-              <li>
-                <FaLinkedin size={18} className={navStyles.socialIcon} />
-              </li>
-              <li>
-                <FaStackOverflow size={18} className={navStyles.socialIcon} />
-              </li>
-            </ul>
           </div>
         </div>
       </header>

@@ -11,6 +11,12 @@
   border-bottom: 2px solid #e6e6e6;
 }
 
+.nav-bar .brand {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .nav-bar .brand a {
   font-size: 15px;
   font-weight: bold;
@@ -27,11 +33,14 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  padding-left: 5rem;
 }
 
 .nav-bar .quick-links li {
   padding-right: 30px;
   cursor: pointer;
+  font-size: 15px;
+  font-family: "Merriweather", serif !important;
 }
 
 .nav-bar .right-nav {
@@ -41,34 +50,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.nav-bar .right-nav .hamburger-menu {
-  display: none;
-}
-
-.nav-bar .right-nav .form-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: whitesmoke;
-  height: 35px;
-  padding: 0 10px;
-  border-radius: 5px;
-  min-width: 280px;
-  margin-right: 20px;
-}
-
-.nav-bar .right-nav .form-wrapper input {
-  width: 100%;
-  border: none;
-  padding-left: 10px;
-  font-size: 14px;
-  background: transparent;
-  outline: none;
 }
 
 .nav-bar .right-nav .social-links {

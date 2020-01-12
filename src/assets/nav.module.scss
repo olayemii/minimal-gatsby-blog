@@ -7,6 +7,7 @@
   align-items: center;
   border-bottom: 2px solid #e6e6e6;
   .brand {
+    flex-grow: 1;
     a {
       font-size: 15px;
       font-weight: bold;
@@ -20,35 +21,36 @@
     list-style: none;
     display: flex;
     flex-grow: 1;
+    padding-left: 5rem;
     li {
       padding-right: 30px;
       cursor: pointer;
+      font-size: 15px;
+      font-family: "Merriweather", serif !important;
     }
   }
   .right-nav {
     display: flex;
     align-items: center;
-    .hamburger-menu {
-      display: none;
-    }
-    .form-wrapper {
-      display: flex;
-      align-items: center;
-      background: whitesmoke;
-      height: 35px;
-      padding: 0 10px;
-      border-radius: 5px;
-      min-width: 280px;
-      margin-right: 20px;
-      input {
-        width: 100%;
-        border: none;
-        padding-left: 10px;
-        font-size: 14px;
-        background: transparent;
-        outline: none;
-      }
-    }
+
+    // .form-wrapper {
+    //   display: flex;
+    //   align-items: center;
+    //   background: whitesmoke;
+    //   height: 35px;
+    //   padding: 0 10px;
+    //   border-radius: 5px;
+    //   min-width: 280px;
+    //   margin-right: 20px;
+    //   input {
+    //     width: 100%;
+    //     border: none;
+    //     padding-left: 10px;
+    //     font-size: 14px;
+    //     background: transparent;
+    //     outline: none;
+    //   }
+    // }
     .social-links {
       display: flex;
       align-items: center;

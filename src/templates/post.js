@@ -7,7 +7,8 @@ import Prism from "prismjs"
 import Disqus from "disqus-react"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
-
+import { AiOutlineTwitter } from "react-icons/ai"
+import { TiSocialFacebook } from "react-icons/ti"
 export const query = gql`
   query GetPost($slug: String!) {
     restApiPostsList(slug: { eq: $slug }) {
@@ -121,9 +122,24 @@ const Post = props => {
           </div>
         </article>
         <aside className={postStyles.articleAside}>
-          Eiusmod commodo amet ullamco sed dolor ut minim nostrud esse eiusmod
-          eu sed occaecat excepteur aliqua minim laborum et dolor nulla amet
-          adipisicing magna sint anim aliqua.
+          <div className={postStyles.credits}></div>
+          <div className="social-share">
+            <h3>Share this article</h3>
+            <a
+              href={`https://twitter.com/share?url=${props.uri}`}
+              className="twitter-share social-button"
+            >
+              <AiOutlineTwitter />
+              Tweet
+            </a>
+            <a
+              href={`https://facebook.com/sharer.php?u=${props.uri}`}
+              className="facebook-share social-button"
+            >
+              <TiSocialFacebook />
+              Share
+            </a>
+          </div>
         </aside>
       </div>
     </MainLayout>

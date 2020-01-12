@@ -31,11 +31,11 @@
 
 .article-card .article-title {
   display: inline-block;
-  font-size: 1.3rem;
-  margin: 3px 0;
+  margin: 10px 0;
 }
 
 .article-card .article-title a {
+  font-size: 1.35rem;
   color: #333;
 }
 

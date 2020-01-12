@@ -99,6 +99,40 @@ body {
   max-width: 968px;
 }
 
+.fit-main-layout {
+  max-width: 968px;
+}
+
+.twitter-share {
+  background-color: #1b95e0;
+}
+
+.facebook-share {
+  background-color: #4267b2;
+}
+
+.social-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 12px;
+  font-family: "Droid Sans";
+  text-decoration: none;
+  color: white;
+  margin-right: 7px;
+  border-radius: 2px;
+}
+
+.social-button svg {
+  margin-right: 5px;
+}
+
 h1 {
   display: block;
   font-size: 2em;
@@ -131,6 +165,9 @@ p {
   .main-layout-body {
     max-width: 80%;
   }
+  .fit-main-layout {
+    max-width: 80%;
+  }
 }
 
 @media screen and (max-width: 426px) {
@@ -140,6 +177,9 @@ p {
   .main-layout-body {
     max-width: 90%;
     padding: 30px 0;
+  }
+  .fit-main-layout {
+    max-width: 90%;
   }
   h1 {
     font-size: 1.4em;
