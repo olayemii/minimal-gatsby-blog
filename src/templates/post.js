@@ -133,7 +133,7 @@ const Post = props => {
               Tweet
             </a>
             <a
-              href={`https://facebook.com/sharer.php?u=https:/${props.location.href}`}
+              href={`https://facebook.com/sharer.php?u=${props.location.href}`}
               className="facebook-share social-button"
             >
               <TiSocialFacebook />
