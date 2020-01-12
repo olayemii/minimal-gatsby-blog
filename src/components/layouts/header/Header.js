@@ -29,9 +29,9 @@ const Header = props => {
                   id="ROOKIEDEV"
                   transform="translate(0 22)"
                   fill="#707070"
-                  font-size="20"
-                  font-family="NirmalaUI-Bold, Nirmala UI"
-                  font-weight="700"
+                  fontSize="20"
+                  fontFamily="NirmalaUI-Bold, Nirmala UI"
+                  fontWeight="700"
                 >
                   <tspan x="0" y="0">
                     ROOKIEDEV
