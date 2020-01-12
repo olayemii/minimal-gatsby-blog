@@ -42,6 +42,7 @@ const Index = props => {
   return (
     <div className={"App"}>
       <Helmet title="TheNoobCoder | Home" defer={false} />
+      <Helmet meta={{name: "theme-color", content="red"}}  />
 
       <MainLayout>
         <div className="articles">

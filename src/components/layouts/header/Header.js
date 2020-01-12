@@ -18,7 +18,27 @@ const Header = props => {
       <header className={navStyles.navBar}>
         <div className={"container fit-main-layout dflex align-items-center"}>
           <div className={navStyles.brand}>
-            <Link to="/">NOOBCODER</Link>
+            <Link to="/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="112"
+                height="27"
+                viewBox="0 0 112 27"
+              >
+                <text
+                  id="ROOKIEDEV"
+                  transform="translate(0 22)"
+                  fill="#707070"
+                  font-size="20"
+                  font-family="NirmalaUI-Bold, Nirmala UI"
+                  font-weight="700"
+                >
+                  <tspan x="0" y="0">
+                    ROOKIEDEV
+                  </tspan>
+                </text>
+              </svg>
+            </Link>
           </div>
           <div className={navStyles.rightNav}>
             {/* <div className={navStyles.formWrapper}>
