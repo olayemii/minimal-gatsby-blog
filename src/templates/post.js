@@ -9,6 +9,7 @@ import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import { AiOutlineTwitter } from "react-icons/ai"
 import { TiSocialFacebook } from "react-icons/ti"
+import SEO from "../components/SEO"
 export const query = gql`
   query GetPost($slug: String!) {
     restApiPostsList(slug: { eq: $slug }) {
@@ -64,7 +65,6 @@ const getClosePost = props => {
 const Post = props => {
   const { data } = props
 
-  console.log(props)
   useEffect(() => {
     Prism.highlightAll()
   })
@@ -79,7 +79,7 @@ const Post = props => {
         title={`TheNoobCoder | ${data.restApiPostsList.title}`}
         defer={false}
       />
-
+      <SEO />
       <div className={postStyles.postBody}>
         <article className={postStyles.articleMain}>
           <h1 className={postStyles.articleTitle}>

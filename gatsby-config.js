@@ -1,11 +1,12 @@
+const config = require("./src/config/app.js")
 /**
  * Configure your Gatsby site with this file.
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-
 module.exports = {
   /* Your site config here */
+  siteMetadata: config,
   plugins: [
     `gatsby-plugin-sass`,
     {
