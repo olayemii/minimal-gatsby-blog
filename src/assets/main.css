@@ -158,15 +158,21 @@ p {
   color: white;
 }
 
+.related-posts {
+  padding: 30px 0px 20px 0;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
 @media screen and (max-width: 1441px) {
   .container {
-    max-width: 80%;
+    max-width: 85%;
   }
   .main-layout-body {
-    max-width: 80%;
+    max-width: 85%;
   }
   .fit-main-layout {
-    max-width: 80%;
+    max-width: 85%;
   }
 }
 

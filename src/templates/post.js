@@ -111,7 +111,7 @@ const Post = props => {
             </div>
           ) : null}
           <div
-            className="dflex"
+            className="dflex related-posts"
             dangerouslySetInnerHTML={{ __html: getClosePost(props) }}
           ></div>
           <div className={postStyles.disqusWrapper}>
