@@ -79,7 +79,7 @@ const Post = props => {
         title={`TheNoobCoder | ${data.restApiPostsList.title}`}
         defer={false}
       />
-      <SEO />
+      <SEO title={`TheNoobCoder | ${data.restApiPostsList.title}`} />
       <div className={postStyles.postBody}>
         <article className={postStyles.articleMain}>
           <h1 className={postStyles.articleTitle}>

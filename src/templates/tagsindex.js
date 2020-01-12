@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet"
 import MainLayout from "../components/layouts/main/MainLayout"
 import Article from "../components/common/article/Article"
 import Pagination from "../components/common/pagination/Pagination"
+import SEO from "../components/SEO"
 
 export const query = gql`
   query GetTagPages($tag: String, $limit: Int, $skip: Int) {
@@ -46,10 +47,7 @@ const Tags = props => {
   return (
     <div className={"App"}>
       <MainLayout>
-        <Helmet
-          title={`TheNoobCoder | Posts tagged ${tag.toUpperCase()}`}
-          defer={false}
-        />
+        <SEO title={`TheNoobCoder | Posts tagged ${tag.toUpperCase()}`} />
         <div className="articles">
           {data.allRestApiPostsList.edges.map(node => (
             <Article data={node.node} key={node.node.id} />

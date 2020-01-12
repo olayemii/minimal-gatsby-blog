@@ -5,6 +5,7 @@ import MainLayout from "../components/layouts/main/MainLayout"
 import Article from "../components/common/article/Article"
 import Pagination from "../components/common/pagination/Pagination"
 import { Helmet } from "react-helmet"
+import SEO from "../components/SEO"
 
 export const query = gql`
   query GetPosts($limit: Int, $skip: Int) {
@@ -41,7 +42,7 @@ const Index = props => {
   console.log(props)
   return (
     <div className={"App"}>
-      <Helmet title="TheNoobCoder | Home" defer={false} />
+      <SEO title={`CodeRookie | Homepage`} />
       <MainLayout>
         <div className="articles">
           {data.allRestApiPostsList.edges.map(node => (
